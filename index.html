@@ -14,6 +14,10 @@
     <p>Trump Suit: <span id="trump-suit">None</span></p>
     <button onclick="updateTeam1Score()">Increase Team 1 Score</button>
     <button onclick="updateTeam2Score()">Increase Team 2 Score</button>
+    <p></p>
+    <button onclick="decreaseTeam1Score()">Decrease Team 1 Score</button>
+    <button onclick="decreaseTeam2Score()">Decrease Team 2 Score</button>
+    <p></p>
     <button onclick="updateTrumpHearts()">Hearts</button>
     <button onclick="updateTrumpDiamonds()">Diamonds</button>
     <button onclick="updateTrumpClubs()">Clubs</button>
@@ -33,12 +37,28 @@
       //Update Team 1 Score
       function updateTeam1Score() {
         team1Score = team1Score + 1;
+        if (team1Score > 10) {team1Score = team1Score - 1;}
         document.getElementById('team-1-score').innerText = team1Score;
       }
 
       //Update Team 2 Score
       function updateTeam2Score() {
         team2Score = team2Score + 1;
+        if (team2Score > 10) {team2Score = team2Score - 1;}
+        document.getElementById('team-2-score').innerText = team2Score;
+      }
+
+      //Decrease Team 1 Score
+      function decreaseTeam1Score() {
+        team1Score = team1Score - 1;
+        if (team1Score < 0) { team1Score = team1Score + 1; }
+        document.getElementById('team-1-score').innerText = team1Score;
+      }
+
+      //Decrease Team 2 Score
+      function decreaseTeam2Score() {
+        team2Score = team2Score - 1;
+        if (team2Score < 0) {team2Score = team2Score + 1; }
         document.getElementById('team-2-score').innerText = team2Score;
       }
 
