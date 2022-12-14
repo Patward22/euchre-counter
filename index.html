@@ -11,7 +11,7 @@
     <p>Team 2: <span id="team-2-score">0</span></p>
 
     <h2>Trump Suit</h2>
-    <p>Trump suit: <span id="trump-suit">None</span></p>
+    <p>Trump Suit: <span id="trump-suit">None</span></p>
     <button onclick="updateTeam1Score()">Increase Team 1 Score</button>
     <button onclick="updateTeam2Score()">Increase Team 2 Score</button>
     <button onclick="updateTrumpHearts()">Hearts</button>
@@ -22,7 +22,7 @@
     <script>
       var team1Score = 0;
       var team2Score = 0;
-      const trumpSuit = "";
+      var trumpSuit = "";
 
       // Update the current score
       function updateScore(team1Score, team2Score) {
@@ -40,11 +40,6 @@
       function updateTeam2Score() {
         team2Score = team2Score + 1;
         document.getElementById('team-2-score').innerText = team2Score;
-      }
-
-      // Update the trump suit
-      function updateTrumpSuit(trumpSuit) {
-        document.getElementById('trump-suit').innerText = trumpSuit;
       }
 
       //Update trump  suit to hearts
