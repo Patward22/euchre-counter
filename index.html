@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Euchre Tracker</title>
+  </head>
+  <body>
+    <h1>Euchre Tracker</h1>
+
+    <h2>Current Score</h2>
+    <p>Team 1: <span id="team-1-score">0</span></p>
+    <p>Team 2: <span id="team-2-score">0</span></p>
+
+    <h2>Trump Suit</h2>
+    <p>Trump suit: <span id="trump-suit">None</span></p>
+
+    <script>
+      // Update the current score
+      function updateScore(team1Score, team2Score) {
+        document.getElementById('team-1-score').innerText = team1Score;
+        document.getElementById('team-2-score').innerText = team2Score;
+      }
+
+      // Update the trump suit
+      function updateTrumpSuit(trumpSuit) {
+        document.getElementById('trump-suit').innerText = trumpSuit;
+      }
+    </script>
+  </body>
+</html>
