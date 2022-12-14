@@ -14,10 +14,15 @@
     <p>Trump suit: <span id="trump-suit">None</span></p>
     <button onclick="updateTeam1Score()">Increase Team 1 Score</button>
     <button onclick="updateTeam2Score()">Increase Team 2 Score</button>
+    <button onclick="updateTrumpHearts()">Hearts</button>
+    <button onclick="updateTrumpDiamond()">Diamonds</button>
+    <button onclick="updateTrumpClubs()">Clubs</button>
+    <button onclick="updateTrumpSpades()">Spades</button>
 
     <script>
       var team1Score = 0;
       var team2Score = 0;
+      const trumpSuit = "";
 
       // Update the current score
       function updateScore(team1Score, team2Score) {
@@ -41,6 +46,29 @@
       function updateTrumpSuit(trumpSuit) {
         document.getElementById('trump-suit').innerText = trumpSuit;
       }
+
+      //Update trump  suit to hearts
+      function updateTrumpHearts() {
+        trumpSuit = "Hearts";
+        document.getElementById('trump-suit').innerText = trumpSuit;
+      }
+
+      //Update trump  suit to diamonds
+      function updateTrumpDiamonds() {
+        trumpSuit = "Diamonds";
+        document.getElementById('trump-suit').innerText = trumpSuit;
+      }
+      //Update trump  suit to clubs
+      function updateTrumpClubs() {
+        trumpSuit = "Clubs";
+        document.getElementById('trump-suit').innerText = trumpSuit;
+      }
+      //Update trump  suit to spades
+      function updateTrumpSpades() {
+        trumpSuit = "Spades";
+        document.getElementById('trump-suit').innerText = trumpSuit;
+      }
+
     </script>
   </body>
 </html>
