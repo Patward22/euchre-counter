@@ -17,6 +17,7 @@
     <p></p>
     <button onclick="decreaseTeam1Score()">Decrease Team 1 Score</button>
     <button onclick="decreaseTeam2Score()">Decrease Team 2 Score</button>
+    <button onclick="resetScores()">Reset Scores</button>
     <p></p>
     <button onclick="updateTrumpHearts()">Hearts</button>
     <button onclick="updateTrumpDiamonds()">Diamonds</button>
@@ -59,6 +60,14 @@
       function decreaseTeam2Score() {
         team2Score = team2Score - 1;
         if (team2Score < 0) {team2Score = team2Score + 1; }
+        document.getElementById('team-2-score').innerText = team2Score;
+      }
+
+      //Reset game scores
+      function resetScores() {
+        team1Score = 0;
+        team2Score = 0;
+        document.getElementById('team-1-score').innerText = team1Score;
         document.getElementById('team-2-score').innerText = team2Score;
       }
 
