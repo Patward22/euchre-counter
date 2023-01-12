@@ -20,12 +20,22 @@
     <button onclick="resetScores()">Reset Scores</button>
     <p></p>
     <button 
-          <img id = "Hearts Image" src= 
-      https://raw.githubusercontent.com/Patward22/euchre-counter/main/red-heart-md.png
-          onclick="updateTrumpHearts()">Hearts</button>
-    <button onclick="updateTrumpDiamonds()">Diamonds</button>
-    <button onclick="updateTrumpClubs()">Clubs</button>
-    <button onclick="updateTrumpSpades()">Spades</button>
+          onclick="updateTrumpHearts()"><img id = "Hearts Image" src= 
+          https://raw.githubusercontent.com/Patward22/euchre-counter/main/red-heart-md.png>
+          <style height:100px; width:100px></style>
+      </button>
+    <button 
+          onclick="updateTrumpDiamonds()"><img id = "Diamonds Image" src=
+          https://raw.githubusercontent.com/Patward22/euchre-counter/main/Diamonds.png>
+    </button>
+    <button 
+          onclick="updateTrumpClubs()"><img id = "Clubs Image" src= 
+          https://raw.githubusercontent.com/Patward22/euchre-counter/main/Clubs.png>
+        </button>
+    <button 
+          onclick="updateTrumpSpades()"><img id = "Spades Image" src= 
+          https://raw.githubusercontent.com/Patward22/euchre-counter/main/Spades.png>
+        </button>
 
     <script>
       var team1Score = 0;
@@ -95,6 +105,19 @@
         trumpSuit = "Spades";
         document.getElementById('trump-suit').innerText = trumpSuit;
       }
+      //resizing buttons
+      var myButton = document.getElementById('Hearts Image');
+      myButton.style.height = '40px';
+      myButton.style.width= '40px';
+      var myButton = document.getElementById('Diamonds Image');
+      myButton.style.height = '40px';
+      myButton.style.width= '40px';
+      var myButton = document.getElementById('Clubs Image');
+      myButton.style.height = '40px';
+      myButton.style.width= '40px';
+      var myButton = document.getElementById('Spades Image');
+      myButton.style.height = '40px';
+      myButton.style.width= '40px';
 
     </script>
   </body>
