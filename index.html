@@ -14,7 +14,7 @@
     </center>
     </p>
 
-    <p><center>Team 2: 
+    <p><center><class = normaltext>Team 2:</class> 
       <button class = 'Score-Manager' onclick="decreaseTeam2Score()"><</button>
       <span id="team-2-score">0</span>
       <button class = 'Score-Manager' onclick="updateTeam2Score()">></button>
@@ -98,7 +98,7 @@
 
       //Update trump  suit to hearts
       function updateTrumpHearts() {
-        trumpSuit = "Hearts";
+        //trumpSuit = "Hearts";
         document.getElementById('trump-suit').innerText = trumpSuit;
       }
 
@@ -114,7 +114,7 @@
       }
       //Update trump  suit to spades
       function updateTrumpSpades() {
-        trumpSuit = "Spades"
+        trumpSuit = document.getElementById('Spades Image');
         document.getElementById('trump-suit').innerText = trumpSuit;
       }
       //resizing buttons
@@ -141,11 +141,22 @@
     .Score-Manager {
       color: black;
       background-color: white;
-      text-decoration:solid ;
+      font-size: larger;
     }
     .reset-button{
       background-color: white;
       color: black;
+      font-size: large;
+    }
+    h2{
+      font-size: xx-large;
+    }
+    h1{
+      font-size: 400%;
+      vertical-align: auto;
+    }
+    .normaltext{
+      font-size: 150%;
     }
   
     </style>
