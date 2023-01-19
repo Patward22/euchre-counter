@@ -4,38 +4,50 @@
     <title>Euchre Tracker</title>
   </head>
   <body>
-    <h1>Euchre Tracker</h1>
+    <h1><center>Euchre Tracker</center></h1>
 
-    <h2>Current Score</h2>
-    <p>Team 1: <span id="team-1-score">0</span></p>
-    <p>Team 2: <span id="team-2-score">0</span></p>
+    <h2><center>Current Score</center></h2>
+    <p><center>Team 1: 
+      <button class = 'Score-Manager' onclick="decreaseTeam1Score()"><</button>
+      <span id="team-1-score">0</span>
+      <button class = 'Score-Manager'onclick="updateTeam1Score()">></button>
+    </center>
+    </p>
 
-    <h2>Trump Suit</h2>
-    <p>Trump Suit: <span id="trump-suit">None</span></p>
-    <button onclick="updateTeam1Score()">Increase Team 1 Score</button>
-    <button onclick="updateTeam2Score()">Increase Team 2 Score</button>
-    <p></p>
-    <button onclick="decreaseTeam1Score()">Decrease Team 1 Score</button>
-    <button onclick="decreaseTeam2Score()">Decrease Team 2 Score</button>
-    <button onclick="resetScores()">Reset Scores</button>
-    <p></p>
-    <button 
+    <p><center>Team 2: 
+      <button class = 'Score-Manager' onclick="decreaseTeam2Score()"><</button>
+      <span id="team-2-score">0</span>
+      <button class = 'Score-Manager' onclick="updateTeam2Score()">></button>
+    </center>
+    </p>
+    
+    <p><center>
+      <button class = 'reset-button' onclick="resetScores()">Reset Scores</button>
+    </p></center>
+
+    <h2><center>Trump Suit</center></h2>
+    <p><center>Trump Suit: <span id="trump-suit" src = "trump-suit">None</span></center></p>
+
+    <p>
+      <center>
+    <button class = 'TrumpButtons'
           onclick="updateTrumpHearts()"><img id = "Hearts Image" src= 
           https://raw.githubusercontent.com/Patward22/euchre-counter/main/red-heart-md.png>
-          <style height:100px; width:100px></style>
       </button>
-    <button 
+    <button class = 'TrumpButtons'
           onclick="updateTrumpDiamonds()"><img id = "Diamonds Image" src=
           https://raw.githubusercontent.com/Patward22/euchre-counter/main/Diamonds.png>
     </button>
-    <button 
+    <button class = 'TrumpButtons'
           onclick="updateTrumpClubs()"><img id = "Clubs Image" src= 
           https://raw.githubusercontent.com/Patward22/euchre-counter/main/Clubs.png>
         </button>
-    <button 
+    <button class = 'TrumpButtons'
           onclick="updateTrumpSpades()"><img id = "Spades Image" src= 
           https://raw.githubusercontent.com/Patward22/euchre-counter/main/Spades.png>
         </button>
+      </center>
+    </p>
 
     <script>
       var team1Score = 0;
@@ -102,7 +114,7 @@
       }
       //Update trump  suit to spades
       function updateTrumpSpades() {
-        trumpSuit = "Spades";
+        trumpSuit = "Spades"
         document.getElementById('trump-suit').innerText = trumpSuit;
       }
       //resizing buttons
@@ -120,5 +132,22 @@
       myButton.style.width= '40px';
 
     </script>
+    <style scoped>
+    .TrumpButtons {
+          height: 60px;
+          width: 60px;
+          background-color: white;
+        }
+    .Score-Manager {
+      color: black;
+      background-color: white;
+      text-decoration:solid ;
+    }
+    .reset-button{
+      background-color: white;
+      color: black;
+    }
+  
+    </style>
   </body>
 </html>
