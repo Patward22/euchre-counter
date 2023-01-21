@@ -5,16 +5,15 @@
   </head>
   <body>
     <h1><center>Euchre Tracker</center></h1>
-
     <h2><center>Current Score</center></h2>
-    <p><center>Team 1: 
+    <p><center><span class="normaltext">Team 1:</span>
       <button class = 'Score-Manager' onclick="decreaseTeam1Score()"><</button>
       <span id="team-1-score">0</span>
       <button class = 'Score-Manager'onclick="updateTeam1Score()">></button>
     </center>
     </p>
 
-    <p><center><class = normaltext>Team 2:</class> 
+    <p><center><span class="normaltext">Team 2:</span>
       <button class = 'Score-Manager' onclick="decreaseTeam2Score()"><</button>
       <span id="team-2-score">0</span>
       <button class = 'Score-Manager' onclick="updateTeam2Score()">></button>
@@ -119,11 +118,11 @@
     </script>
     <style scoped>
     .TrumpButtons {
-          height: 60px;
-          width: 60px;
-          background-color: white;
-          border-color: black;
-        }
+      height: 60px;
+      width: 60px;
+      background-color: white;
+      border-color: black;
+    }
     #ClubsImage{
       height: 40px;
       width: 40px;
@@ -174,6 +173,52 @@
       h1{
         font-size: 800%;
         vertical-align: auto;
+      }
+      h2{
+        font-size: 400%;
+      }
+      #HeartsImage{
+        height: 80px;
+        width: 80px;
+      }
+      #DiamondsImage{
+        height: 80px;
+        width: 80px;
+      }
+      #ClubsImage{
+        height: 80px;
+        width: 80px;
+      }
+      #SpadesImage{
+        height: 80px;
+        width: 80px;
+      }
+      .TrumpButtons {
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        border-color: black;
+      }
+      .Score-Manager {
+        color: black;
+        background-color: white;
+        font-size: xx-large;
+      }
+      .normaltext{
+        font-size: 300%;
+      }
+      .reset-button{
+        font-size: 300%;
+      }
+      #trump-suit{
+        height: 160px;
+        width: 160px;
+      }
+      #team-1-score{
+        font-size: 250%;
+      }
+      #team-2-score{
+        font-size: 250%;
       }
     }
     </style>
