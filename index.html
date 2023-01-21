@@ -5,18 +5,18 @@
   </head>
   <body>
     <h1><center>Euchre Tracker</center></h1>
-    <h2><center>Current Score</center></h2>
+    <h2><center><span class = "currentscoretext">Current Score</span></center></h2>
     <p><center><span class="normaltext">Team 1:</span>
-      <button class = 'Score-Manager' onclick="decreaseTeam1Score()"><</button>
+      <button class = 'Score-Manager' onclick="decreaseTeam1Score()"><span class="scoretext"><</span></button>
       <span id="team-1-score">0</span>
-      <button class = 'Score-Manager'onclick="updateTeam1Score()">></button>
+      <button class = 'Score-Manager'onclick="updateTeam1Score()"><span class="scoretext">></span></button>
     </center>
     </p>
 
     <p><center><span class="normaltext">Team 2:</span>
-      <button class = 'Score-Manager' onclick="decreaseTeam2Score()"><</button>
+      <button class = 'Score-Manager' onclick="decreaseTeam2Score()"><span class="scoretext"><</span></button>
       <span id="team-2-score">0</span>
-      <button class = 'Score-Manager' onclick="updateTeam2Score()">></button>
+      <button class = 'Score-Manager' onclick="updateTeam2Score()"><span class="scoretext">></span></button>
     </center>
     </p>
 
@@ -202,7 +202,6 @@
       .Score-Manager {
         color: black;
         background-color: white;
-        font-size: xx-large;
         margin-left: 3%;
         margin-right:3%;
         margin-top: 3%;
@@ -221,11 +220,18 @@
         width: 160px;
       }
       #team-1-score{
-        font-size: 250%;
+        font-size: 350%;
       }
       #team-2-score{
-        font-size: 250%;
+        font-size: 350%;
       }
+      .scoretext{
+        font-size: 350%;
+      }
+      .currentscoretext{
+        margin-top: 5%;
+      }
+      button { touch-action: manipulation; }
     }
     </style>
   </body>
