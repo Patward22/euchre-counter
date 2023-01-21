@@ -26,24 +26,26 @@
     </p></center>
 
     <h2><center>Trump Suit</center></h2>
-    <p><center>Trump Suit: <span id="trump-suit" src = "trump-suit">None</span></center></p>
+    <center><img id="trump-suit"></img></center>
+
+    <h2> <center>Trump Selector</center></h2>
 
     <p>
       <center>
     <button class = 'TrumpButtons'
-          onclick="updateTrumpHearts()"><img id = "Hearts Image" src= 
+          onclick="updateTrumpHearts()"><img id = "HeartsImage" src= 
           https://raw.githubusercontent.com/Patward22/euchre-counter/main/red-heart-md.png>
       </button>
     <button class = 'TrumpButtons'
-          onclick="updateTrumpDiamonds()"><img id = "Diamonds Image" src=
+          onclick="updateTrumpDiamonds()"><img id = "DiamondsImage" src=
           https://raw.githubusercontent.com/Patward22/euchre-counter/main/Diamonds.png>
     </button>
     <button class = 'TrumpButtons'
-          onclick="updateTrumpClubs()"><img id = "Clubs Image" src= 
+          onclick="updateTrumpClubs()"><img id = "ClubsImage" src= 
           https://raw.githubusercontent.com/Patward22/euchre-counter/main/Clubs.png>
         </button>
     <button class = 'TrumpButtons'
-          onclick="updateTrumpSpades()"><img id = "Spades Image" src= 
+          onclick="updateTrumpSpades()"><img id = "SpadesImage" src= 
           https://raw.githubusercontent.com/Patward22/euchre-counter/main/Spades.png>
         </button>
       </center>
@@ -98,38 +100,21 @@
 
       //Update trump  suit to hearts
       function updateTrumpHearts() {
-        //trumpSuit = "Hearts";
-        document.getElementById('trump-suit').innerText = trumpSuit;
+        document.getElementById('trump-suit').src = "https://raw.githubusercontent.com/Patward22/euchre-counter/main/red-heart-md.png";
       }
 
       //Update trump  suit to diamonds
       function updateTrumpDiamonds() {
-        trumpSuit = "Diamonds";
-        document.getElementById('trump-suit').innerText = trumpSuit;
+        document.getElementById('trump-suit').src = 'https://raw.githubusercontent.com/Patward22/euchre-counter/main/Diamonds.png';
       }
       //Update trump  suit to clubs
       function updateTrumpClubs() {
-        trumpSuit = "Clubs";
-        document.getElementById('trump-suit').innerText = trumpSuit;
+        document.getElementById('trump-suit').src = 'https://raw.githubusercontent.com/Patward22/euchre-counter/main/Clubs.png';
       }
       //Update trump  suit to spades
       function updateTrumpSpades() {
-        trumpSuit = document.getElementById('Spades Image');
-        document.getElementById('trump-suit').innerText = trumpSuit;
+        document.getElementById('trump-suit').src = 'https://raw.githubusercontent.com/Patward22/euchre-counter/main/Spades.png';
       }
-      //resizing buttons
-      var myButton = document.getElementById('Hearts Image');
-      myButton.style.height = '40px';
-      myButton.style.width= '40px';
-      var myButton = document.getElementById('Diamonds Image');
-      myButton.style.height = '40px';
-      myButton.style.width= '40px';
-      var myButton = document.getElementById('Clubs Image');
-      myButton.style.height = '40px';
-      myButton.style.width= '40px';
-      var myButton = document.getElementById('Spades Image');
-      myButton.style.height = '40px';
-      myButton.style.width= '40px';
 
     </script>
     <style scoped>
@@ -137,7 +122,27 @@
           height: 60px;
           width: 60px;
           background-color: white;
+          border-color: black;
         }
+    #ClubsImage{
+      height: 40px;
+      width: 40px;
+      border-color: black;
+    }
+    #HeartsImage{
+      height: 40px;
+      width: 40px;
+      border-color: black;
+    }
+    #SpadesImage{
+      height: 40px;
+      width: 40px;
+    }
+    #DiamondsImage{
+      height: 40px;
+      width: 40px;
+      border-color: black;
+    }
     .Score-Manager {
       color: black;
       background-color: white;
@@ -147,6 +152,7 @@
       background-color: white;
       color: black;
       font-size: large;
+      border-color: black;
     }
     h2{
       font-size: xx-large;
@@ -157,6 +163,12 @@
     }
     .normaltext{
       font-size: 150%;
+    }
+    #trump-suit{
+      background-color: white;
+      border: 0;
+      height: 80px;
+      width: 80px;
     }
   
     </style>
